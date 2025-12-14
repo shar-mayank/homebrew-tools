@@ -1,9 +1,10 @@
 class Convert2pdf < Formula
   desc "Command-line tool to convert between Office formats and PDF"
   homepage "https://github.com/shar-mayank/convert2pdf"
-  url "https://github.com/shar-mayank/convert2pdf/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "35292b336703fe263713aca0b556e8a9d2cb80170254420a8d1e16c0975ffe11"
+  url "https://github.com/shar-mayank/convert2pdf/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "3af26db77fe23577c9ff8027fdd2ba41a6801485de246322acc18649ab712857"
   license "MIT"
+  version "1.0.1"
   head "https://github.com/shar-mayank/convert2pdf.git", branch: "main"
 
   depends_on "python@3"
@@ -36,7 +37,7 @@ class Convert2pdf < Formula
 
   test do
     # Version test
-    assert_match "convert2pdf version #{version}", shell_output("#{bin}/convert2pdf --version")
+    assert_match "convert2pdf version 1.0.1", shell_output("#{bin}/convert2pdf --version")
 
     # Help test
     assert_match "Usage:", shell_output("#{bin}/convert2pdf --help")
