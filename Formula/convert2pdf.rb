@@ -1,8 +1,8 @@
 class Convert2pdf < Formula
   desc "Command-line tool to convert between Office formats and PDF"
   homepage "https://github.com/shar-mayank/convert2pdf"
-  url "https://github.com/shar-mayank/convert2pdf/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "e55770b0c4969e9bc09e5934e87b42452bdb5f53dba39dc7c0d1cb1c3629dda2"
+  url "https://github.com/shar-mayank/convert2pdf/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "143b7abe1592ffc21a13f66c75d6df5f201b3df9f48b962e4d3643d71b64bbad"
   license "MIT"
   head "https://github.com/shar-mayank/convert2pdf.git", branch: "main"
 
@@ -30,7 +30,7 @@ class Convert2pdf < Formula
   end
 
   test do
-    assert_match "convert2pdf version 1.0.0", shell_output("#{bin}/convert2pdf --version")
+    assert_match "convert2pdf version 1.0", shell_output("#{bin}/convert2pdf --version")
     assert_match "Usage:", shell_output("#{bin}/convert2pdf --help")
     assert_predicate bin/"convert2pdf", :executable?
   end
